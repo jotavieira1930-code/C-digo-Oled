@@ -13,7 +13,7 @@
 #define SDA_PIN 14
 #define SCL_PIN 15
 
-int A_state = 0;    // Botao A está pressionado?
+int A_state = 0;    // Botão A está pressionado?
 
 // Inicializando a tela OLED
 ssd1306_t display;
@@ -64,14 +64,14 @@ int main(){
     gpio_pull_up(BTN_A_PIN);
     
     // INICIANDO O I2C PARA OLED
-    i2c_init(I2C_PORT, 400000);  // 400kHz é a velocidade do barramento I2C
+    i2c_init(I2C_PORT, 400000);  // 400 kHz é a velocidade do barramento I2C
     gpio_set_function(SDA_PIN, GPIO_FUNC_I2C);
     gpio_set_function(SCL_PIN, GPIO_FUNC_I2C);
     gpio_pull_up(SDA_PIN);
     gpio_pull_up(SCL_PIN);
 
     // Inicializando o display OLED
-    ssd1306_init(&display, 128, 64, 0x3C,I2C_PORT);  // Endereço I2C padrão do SSD1306
+    ssd1306_init(&display, 128, 64, 0x3C, I2C_PORT);  // Endereço I2C padrão do SSD1306
 
     while(true){
         // Semáforo verde para os carros

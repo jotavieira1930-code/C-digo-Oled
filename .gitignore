@@ -1,1 +1,15 @@
-build
+/build/
+/.vscode/
+/Oled.project/
+
+CMakeCache.txt
+CMakeFiles/
+compile_commands.json
+
+*.bin
+*.dis
+*.elf
+*.hex
+*.map
+*.uf2
+*.zip
