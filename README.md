@@ -36,10 +36,10 @@ passagem é liberada automaticamente por 8 segundos.
 
 ```mermaid
 flowchart TD
-    A["🔴 Sinal fechado"] --> B{"Botão pressionado<br>em até 8 segundos?"}
-    B -- Sim --> C["Aguarda 1 segundo"]
-    C --> D["🟢 Sinal aberto por 5 segundos"]
-    B -- Não --> E["🟢 Sinal aberto por 8 segundos"]
+    A[Sinal fechado] --> B{Botao pressionado em ate 8 segundos?}
+    B -->|Sim| C[Aguarda 1 segundo]
+    C --> D[Sinal aberto por 5 segundos]
+    B -->|Nao| E[Sinal aberto por 8 segundos]
     D --> A
     E --> A
 ```
